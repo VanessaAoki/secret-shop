@@ -7,6 +7,6 @@ class CreateArticles < ActiveRecord::Migration[6.1]
       t.text :image_data
       t.timestamps
     end
-    add_index :articles, :author_id 
+    add_index :articles, :author_id
   end
 end
