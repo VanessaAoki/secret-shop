@@ -19,6 +19,11 @@
 $main: #4E443E;
 $accent: #F86309;
 
+html { 
+  min-height: 100vh;
+  position: relative;
+}
+
 body { margin-top: 70px; }
 
 a,
@@ -51,4 +56,118 @@ color: white;
 .button {
   border: hidden;
   font-weight: 700;
+}
+
+.box {
+  background-color: hsl(0, 0%, 85%);
+  margin-bottom: 0 !important;
+  border: none;
+}
+
+#user_remember_me {
+  height: 10px;
+  width: 10px;
+}
+
+form > div > input {
+  width: 280px;
+  height: 35px;
+  padding: 2px 5px;
+  background-color: hsl(0, 0%, 89%);
+  border: 1 solid $main;
+  border-radius: 5px;
+}
+
+form > .field { width: 280px; }
+
+.navbar { border-bottom: 1px solid rgb(107, 107, 107); }
+
+.sign-in {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sign-in > div > a { color: $accent; }
+
+.sign-in-button { width: 250px; }
+
+.sign-up {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sign-up > div > a { color: $accent; }
+
+.sign-up-button { width: 280px; }
+
+.sign-up-text { text-align: center; }
+
+.img-signin {width: 250px;}
+
+.columns:last-child {margin-bottom: 0;}
+
+footer {
+  border-top: 1px solid rgb(48, 48, 48);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+// MOBILE
+@media only screen and (max-width: 768px) {
+  .sign-in-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .sign-in-box,
+  .sign-up-box {
+    border-radius: 25px;
+    padding: 30px 30px;
+  }
+
+  .sign-up-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .update-button,
+  .cancel-update-button { width: 120px; }
+}
+
+// OTHERS
+@media only screen and (min-width: 768px) {
+  .sign-in-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .sign-in-box {
+    border-radius: 25px;
+    margin-left: 25px;
+    padding: 10px 30px;
+  }
+
+  .sign-up-container {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+  }
+
+  .sign-up-box {
+    border-radius: 25px;
+    margin-right: 55px;
+    padding: 10px 30px;
+  }
+
+  .update-button,
+  .cancel-update-button { width: 120px; }
 }
