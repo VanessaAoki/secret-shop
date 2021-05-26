@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'vote/create'
+  get 'vote/destroy'
+  get 'user/show'
   devise_for :users,  :controllers  => { registrations: 'registrations' }
 
   resources :articles

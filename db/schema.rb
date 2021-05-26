@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2021_05_25_220625) do
     t.index ["author_id"], name: "index_articles_on_author_id"
   end
 
-  create_table "articles_categories", force: :cascade do |t|
+  create_table "categories", force: :cascade do |t|
     t.string "name"
     t.integer "priority"
     t.datetime "created_at", precision: 6, null: false
@@ -44,11 +44,11 @@ ActiveRecord::Schema.define(version: 2021_05_25_220625) do
 
   create_table "votes", force: :cascade do |t|
     t.integer "article_id"
-    t.integer "author_id"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["article_id"], name: "index_votes_on_article_id"
-    t.index ["author_id"], name: "index_votes_on_author_id"
+    t.index ["user_id"], name: "index_votes_on_user_id"
   end
 
 end
