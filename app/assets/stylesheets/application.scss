@@ -17,6 +17,7 @@
 @import "bulma";
 
 $main: #4E443E;
+$gray: #847F7B;
 $accent: #F86309;
 
 html { 
@@ -48,10 +49,14 @@ color: white;
 
 .is-navbar {
   background-color: white;
-  color: $main;
+  color: $gray;
 }
 
 .is-navbar:hover { color: $accent; }
+
+.has-text-navbar { color: $gray; }
+
+.is-size-09 { font-size: 0.9rem; }
 
 .button {
   border: hidden;
@@ -81,7 +86,7 @@ form > div > div > input {
 
 form > .field { width: 280px; }
 
-.navbar { border-bottom: 1px solid rgb(107, 107, 107); }
+.navbar { border-bottom: 1px solid $gray; }
 
 .sign-in {
   width: 280px;
@@ -116,6 +121,18 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+
+.footer-icons {
+  background-color: $accent;
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
 }
 
 // MOBILE

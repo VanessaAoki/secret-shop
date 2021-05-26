@@ -3,19 +3,19 @@ module ApplicationHelper
     out = ''
     if user_signed_in?
       out += '<p>'
-      out += link_to current_user.name, edit_user_registration_path, class: 'button ml-2 is-navbar'
+      out += link_to current_user.name, edit_user_registration_path, class: 'button is-navbar is-uppercase is-size-09'
       out += '</p>'
-      out += "<span class=\"is-flex is-align-items-center ml-2 has-text-weight-bold\">|</span>"
+      out += "<span class=\"is-flex is-align-items-center has-text-navbar has-text-weight-bold\">|</span>"
       out += '<p>'
-      out += link_to 'Logout', destroy_user_session_path, method: :delete, class: 'button ml-2 is-navbar'
+      out += link_to 'LOGOUT', destroy_user_session_path, method: :delete, class: 'button is-navbar is-size-09'
     else
       out += '</p>'
       out += '<p>'
-      out += link_to 'Log In', new_user_session_path, class: 'button is-navbar'
+      out += link_to 'LOGIN', new_user_session_path, class: 'button is-navbar is-size-09'
       out += '</p>'
-      out += "<span class=\"is-flex is-align-items-center ml-2 has-text-weight-bold\">|</span>"
+      out += "<span class=\"is-flex is-align-items-center has-text-navbar has-text-weight-bold\">|</span>"
       out += '<p>'
-      out += link_to 'Sign Up', new_user_registration_path, class: 'button is-navbar'
+      out += link_to 'REGISTER', new_user_registration_path, class: 'button is-navbar is-size-09'
       out += '</p>'
     end
     out.html_safe
