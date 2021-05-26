@@ -1,17 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html class="is-main">
   <head>
-    <title>SecretShop</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+    <title>Secret shop</title>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" %>
   </head>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-  <body>
+  <body class="has-text-white">
+  <%# HEADER %>
+  <header>
+    <nav class="navbar has-background-white is-fixed-top">
+  		<div class="navbar-brand">
+        <%= link_to root_path, class: "navbar-item" do %>
+          <h1 class="title is-4 has-text-main">Secret shop</h1>
+        <% end %>
+        <div class="navbar-item">
+          <div class="field is-grouped">
+            <div></div>
+          </div>
+        </div>
+        <div class="navbar-burger burger has-text-main" data-target="navbar">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+  	  </div>
+
+			<div id="navbar" class="navbar-menu">
+				<div class="navbar-end">
+          <div class="navbar-item">
+            <div class="field is-grouped">
+              <%= user_navbar %>
+            </div>
+					</div>
+				</div>
+			</div>
+  	</nav>
+  </header>   
+  <main class="main">
     <%= yield %>
+  </main>
+  <footer class="is-flex is-flex-direction-column is-align-items-center mt-4">
+    <p class="py-4">
+      Made with <i class="fas fa-heart has-text-main px-1 has-text-accent"></i> by <a href="https://github.com/VanessaAoki" class="has-text-accent">Vanessa Aoki</a>.
+    </p>
+  </footer>
+    <script src="https://kit.fontawesome.com/0348c0adc9.js" crossorigin="anonymous"></script>
   </body>
 </html>

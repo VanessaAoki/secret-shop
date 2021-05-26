@@ -15,3 +15,40 @@
  */
 
 @import "bulma";
+
+$main: #4E443E;
+$accent: #F86309;
+
+body { margin-top: 70px; }
+
+a,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+.is-main {
+  background-color: $main;
+  color: white;
+}
+
+.has-text-main { color: $main; }
+
+.is-accent{
+background-color: $accent;
+color: white;
+}
+
+.has-text-accent { color: $accent; }
+
+.is-navbar {
+  background-color: white;
+  color: $accent;
+}
+
+.is-navbar:hover { color: $main; }
+
+.button {
+  border: hidden;
+  font-weight: 700;
+}
