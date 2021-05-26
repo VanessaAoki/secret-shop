@@ -48,10 +48,10 @@ color: white;
 
 .is-navbar {
   background-color: white;
-  color: $accent;
+  color: $main;
 }
 
-.is-navbar:hover { color: $main; }
+.is-navbar:hover { color: $accent; }
 
 .button {
   border: hidden;

@@ -3,7 +3,6 @@ class CategoriesController < ApplicationController
   def index
     @categories = Category.includes(:articles).all
     articles = Article.all
-    
     @articles_by_category = []
     @categories.each do |category|
       @articles_by_category << recent_article(category) unless recent_article(category).nil?

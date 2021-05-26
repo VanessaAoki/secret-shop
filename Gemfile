@@ -26,14 +26,16 @@ gem 'webpacker', '~> 5.0'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
+# Devise
+gem 'devise', '~> 4.7', '>= 4.7.3'
 # Bulma-rails
 gem 'bulma-rails', '~> 0.9.1'
 # Simple form
 gem 'simple_form', '~> 5.1'
 # Gravatar
 gem 'gravatar_image_tag', '~> 1.2'
-# Devise
-gem 'devise', '~> 4.7', '>= 4.7.3'
+# Font Awesome for rails
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
