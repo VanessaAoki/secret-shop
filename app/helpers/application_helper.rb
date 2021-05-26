@@ -22,10 +22,10 @@ module ApplicationHelper
   def render_sign_in
     out = ''
     if current_user
-      out << link_to(current_user.name, user_path(id: current_user.id))
-      out << link_to('Sign out', destroy_user_session_path, method: :delete)
+      out += link_to(current_user.name, user_path(id: current_user.id))
+      out += link_to('Sign out', destroy_user_session_path, method: :delete)
     else
-      out << link_to('Sign in', user_session_path)
+      out += link_to('Sign in', user_session_path)
     end
     out.html_safe
   end
