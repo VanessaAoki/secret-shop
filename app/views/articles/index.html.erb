@@ -36,6 +36,8 @@
     <h2 class="my-5 has-text-weight-semibold">BlizzCon 2021 is not happening</h2>
     <p class="mb-5 has-text-weight-normal articles-news-main">There won't be an in-person convention this November, but Blizzard is planning an early 2022 event.</p>
     <span class="mb-5 has-text-accent">Read More</span>
+<%= admin_create_article %>
+
   </div>
 </div>
 
@@ -48,16 +50,9 @@
   </thead>
 
   <tbody>
-    <% @articles.each do |article| %>
-      <tr>
-        <td><%= link_to 'Show', article %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+    <% articles_controller %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Article', new_article_path %>
