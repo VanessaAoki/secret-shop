@@ -1,4 +1,12 @@
 <p id="notice"><%= notice %></p>
 
+<h1>
+  <%= @article.title %>
+  <%= @article.text %>
+  <img src="<%=(url_for(@article.image_data))%>" alt="Image">
+
+</h1>
+
 <%= link_to 'Edit', edit_article_path(@article) %> |
+<%= link_to 'Destroy', @article, method: :delete, data: { confirm: 'Are you sure?' } %> |
 <%= link_to 'Back', articles_path %>

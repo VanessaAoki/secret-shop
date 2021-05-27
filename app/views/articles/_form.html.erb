@@ -9,6 +9,9 @@
       <%= f.input :text, label: "Fill the content of your article:", input_html: { class: "textarea"}, wrapper: false, label_html: {class: "label"}, placeholder: "Awesome content article here..." %>
       <br>
 
+      <%= f.file_field :image_data %>
+
+
       <%= fields_for(@selected) do |s| %>
       <strong><%= s.label :categories %></strong><br><br>
       <%= s.collection_select(:selected_id, @categories, :id, :name, {selected: 2, include_hidden: false}, { multiple: true }) %>

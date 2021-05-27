@@ -14,10 +14,13 @@ class ArticlesController < ApplicationController
   def new
     @article = Article.new
     @categories = Category.all
+    @article.image_data.attach(params[:image_data])
   end
 
   # GET /articles/1/edit
-  def edit; end
+  def edit
+    @article.image_data.attach(params[:image_data])
+  end
 
   # POST /articles or /articles.json
   def create
@@ -64,7 +67,7 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:title, :body, :text, :image)
+    params.require(:article).permit(:title, :text, :image_data)
   end
 
   def category_ids
