@@ -3,7 +3,7 @@
 <h1>
   <%= @article.title %>
   <%= @article.text %>
-  <img src="<%=(url_for(@article.image_data))%>" alt="Image">
+  <%= image_tag(@article.image) if @article.image.attached? %>
 
 </h1>
 
