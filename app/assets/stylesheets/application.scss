@@ -88,6 +88,52 @@ form > .field { width: 280px; }
 
 .navbar { border-bottom: 1px solid $gray; }
 
+.articles-home { overflow: hidden; } 
+
+.article-categories {
+  display: inline-block;
+  position: relative;
+  width: 50%;
+}
+
+.dummy {
+  margin-top: 80%;
+}
+
+.article-main-image {
+  float: left;
+  overflow: hidden;
+  display: inline;
+  height: 60vh;
+  width: 100%;
+  filter: grayscale(30%);
+}
+
+.article-categories-image {
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  filter: grayscale(50%);
+}
+
+.article-news > h1 {
+  font-weight: 700;
+  display: inline;
+  border-bottom: 3px solid $accent;
+  padding-bottom: 3px;
+  font-size: 1.4rem;
+}
+
+.article-news-main {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .sign-in {
   width: 280px;
   display: flex;

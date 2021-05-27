@@ -1,6 +1,44 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Articles</h1>
+<div class="columns articles-home is-multiline">
+  <div class="column p-0 article-main is-9">
+    <%= image_tag ("/assets/dota.jpg"), class:'article-main-image' %>
+  </div>
+  <div class="column p-0 article-side is-3">
+  </div>
+
+  <div class="column p-0 article-categories is-3">
+    <div class="dummy"></div>
+    <%= image_tag ("/assets/valorant.jpg"), class:'article-categories-image' %>
+  </div>
+  <div class="column p-0 article-categories is-3">
+    <div class="dummy"></div>
+    <%= image_tag ("/assets/pubg.jpg"), class:'article-categories-image' %>
+  </div>
+  <div class="column p-0 article-categories is-3">
+    <div class="dummy"></div>
+    <%= image_tag ("/assets/fnatic.png"), class:'article-categories-image' %>
+  </div>
+  <div class="column p-0 article-categories is-3">
+    <div class="dummy"></div>
+    <%= image_tag ("/assets/csgo.jpg"), class:'article-categories-image' %>
+  </div>
+</div>
+
+<%# NEWS ARTICLES %>
+<div class="columns articles-home is-multiline">
+  <div class="column p-0 article-categories is-3">
+    <div class="dummy"></div>
+    <%= image_tag ("/assets/blizzcon.webp"), class:'article-categories-image' %>
+  </div>
+  <div class="column p-5 article-news is-3 has-background-white has-text-main has-text-weight-bold">
+    <h1 class="has-text-accent">News</h1>
+    <h2 class="my-5 has-text-weight-semibold">BlizzCon 2021 is not happening</h2>
+    <p class="mb-5 has-text-weight-normal articles-news-main">There won't be an in-person convention this November, but Blizzard is planning an early 2022 event.</p>
+    <span class="mb-5 has-text-accent">Read More</span>
+  </div>
+</div>
+
 
 <table>
   <thead>
