@@ -1,10 +1,4 @@
-module ArticlesHelper
-  def admin_create_article
-    if current_user && current_user.admin
-      link_to 'New Article', new_article_path
-    end
-  end
-  
+module ArticlesHelper  
   def articles_controller(article)
     out = '<div>'
     if current_user.admin == true
