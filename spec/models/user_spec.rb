@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   let!(:user) { User.new(id: 1, name: 'Foo Bar', email: 'foo@bar.com', password: '12345678') }
-  
+
   describe 'Associations ' do
     it { should have_many(:articles).with_foreign_key(:author_id).dependent(:destroy) }
     it { should have_many(:votes).dependent(:destroy) }
@@ -22,4 +22,4 @@ RSpec.describe User, type: :model do
     user.name = nil
     expect(user).to_not be_valid
   end
-end                  
+end
