@@ -23,19 +23,19 @@
           HOME
           </button>
           <button class="button is-navbar px-1 is-size-09">
-          DOTA 2
+            <%= link_to 'EVENTS', category_path(Category.find(2)) %>
           </button>
           <button class="button is-navbar px-1 is-size-09">
-          CS:GO
+            <%= link_to 'DOTA 2', category_path(Category.find(3)) %>
           </button>
           <button class="button is-navbar px-1 is-size-09">
-          VALORANT
+            <%= link_to 'CS:GO', category_path(Category.find(4)) %>
           </button>
           <button class="button is-navbar px-1 is-size-09">
-          LOL
+            <%= link_to 'VALORANT', category_path(Category.find(5)) %>
           </button>
           <button class="button is-navbar px-1 is-size-09">
-          INDIE GAMES
+            <%= link_to 'LOL', category_path(Category.find(6)) %>
           </button>
           <button class="button is-navbar px-1 is-size-09">
           MORE
@@ -80,7 +80,5 @@
   </footer>
     <%# FONT AWESOME SCRIPT %>
     <script src="https://kit.fontawesome.com/0348c0adc9.js" crossorigin="anonymous"></script>
-    <%# CAROUSEL SCRIPT %>
-    <script src="~bulma-carousel/dist/js/bulma-carousel.min.js"></script>
   </body>
 </html>

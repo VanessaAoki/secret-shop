@@ -16,7 +16,7 @@ module ArticlesHelper
     articles.each do |article|
       out += '<div class="column p-0 article-categories is-3">'
       out += '<div class="dummy"></div>'
-      out += image_tag article.image, class: 'article-categories-image'
+      out += image_tag article.image, class: 'article-categories-image' if article.image.attached?
       out += '</div>'
       out += '<div class="column p-5 article-news is-3 has-background-white has-text-main has-text-weight-bold">'
       out += '<h1 class="has-text-accent">News</h1>'
@@ -28,5 +28,28 @@ module ArticlesHelper
       out += '</div>'
     end
     out.html_safe
+  end
+
+  def link(articles, index)
+    link_to(
+      content_tag(:div, nil, class: 'hero-head ml-5 mt-4') do
+        content_tag(:p, @categories.find(index + 1).name,
+                    class: 'title has-text-white') +
+          content_tag(:p, nil, class: 'hero-body pt-6 has-text-white') +
+          (content_tag(:p, articles.title, class: 'hero-foot subtitle size-6 mb-2') if articles)
+      end,
+      article_path(articles), class: 'has-text-black column',
+                              style: "background: url('#{display_photo(articles)}') center center; background-size: cover"
+    )
+  end
+  
+  def show_articles_by_categories(articles)
+    return if articles.nil?
+
+    content_tag(:div, nil, class: 'columns is-gapless') do
+      articles.each_with_index do |articles, index|
+        concat(link(articles, index))
+      end
+    end
   end
 end

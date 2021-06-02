@@ -1,5 +1,8 @@
-<h1>New Category</h1>
+<h1>  <%= @category.name %>
+</h1>
+
+<%= @recent_related_articles %>
 
 <%= render 'form', category: @category %>
 
-<%= link_to 'Back', categories_path %>
+<%= link_to 'Back', root_path %>

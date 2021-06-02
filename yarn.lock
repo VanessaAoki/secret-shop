@@ -1742,11 +1742,6 @@
   "resolved" "https://registry.npmjs.org/builtin-status-codes/-/builtin-status-codes-3.0.0.tgz"
   "version" "3.0.0"
 
-"bulma-carousel@^4.0.24":
-  "integrity" "sha512-DLYKmf/iHH8yAQSo8+O/cQvSVSAo15f+XmbiQvAvu5hUJs5O8I40RbZqrF9OougNs4n4JMokPEIBUiDGAsFuRA=="
-  "resolved" "https://registry.npmjs.org/bulma-carousel/-/bulma-carousel-4.0.24.tgz"
-  "version" "4.0.24"
-
 "bytes@3.0.0":
   "integrity" "sha1-0ygVQE1olpn4Wk6k+odV3ROpYEg="
   "resolved" "https://registry.npmjs.org/bytes/-/bytes-3.0.0.tgz"

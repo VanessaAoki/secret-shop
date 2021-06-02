@@ -5,6 +5,8 @@
   <%= @article.text %>
   <%= image_tag(@article.image) if @article.image.attached? %>
   <%= articles_controller(@article) %>
+  
+  <%= vote_button(art) %>
 
 </h1>
 
