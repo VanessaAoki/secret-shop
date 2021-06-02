@@ -16,11 +16,11 @@
 
 @import "bulma";
 
-$main: #4E443E;
-$gray: #847F7B;
-$accent: #F86309;
+$main: #4e443e;
+$gray: #847f7b;
+$accent: #f86309;
 
-html { 
+html {
   min-height: 100vh;
   position: relative;
 }
@@ -40,9 +40,9 @@ a:active {
 
 .has-text-main { color: $main; }
 
-.is-accent{
-background-color: $accent;
-color: white;
+.is-accent {
+  background-color: $accent;
+  color: white;
 }
 
 .has-text-accent { color: $accent; }
@@ -88,7 +88,7 @@ form > .field { width: 280px; }
 
 .navbar { border-bottom: 1px solid $gray; }
 
-.articles-home { overflow: hidden; } 
+.articles-home { overflow: hidden; }
 
 .article-categories {
   display: inline-block;
@@ -159,9 +159,9 @@ form > .field { width: 280px; }
 
 .sign-up-text { text-align: center; }
 
-.img-signin {width: 250px;}
+.img-signin { width: 250px; }
 
-.columns:last-child {margin-bottom: 0;}
+.columns:last-child { margin-bottom: 0; }
 
 footer {
   border-top: 1px solid rgb(48, 48, 48);
