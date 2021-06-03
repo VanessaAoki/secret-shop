@@ -1,10 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<div class="columns articles-home is-multiline">
+<div class="columns articles-home is-multiline mt-1">
   <div class="column p-0 article-main is-9">
     <%= image_tag ("/assets/dota.jpg"), class:'article-main-image' %>
   </div>
   <div class="column p-0 article-side is-3">
+    <section class="events-aside"><%= render 'events' %></section>
+    <%= image_tag ("/assets/eventsbg.jpg"), class:'article-aside-image' %>
   </div>
 
   <div class="column p-0 article-categories is-3">

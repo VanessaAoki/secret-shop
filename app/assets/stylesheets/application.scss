@@ -102,14 +102,26 @@ form > .field { width: 280px; }
   margin-top: 80%;
 }
 
-.article-main-image {
+.article-main-image,
+.article-aside-image {
   float: left;
   overflow: hidden;
   display: inline;
   height: 60vh;
   width: 100%;
-  filter: grayscale(30%);
 }
+
+.article-main-image {filter: grayscale(30%);}
+
+.article-aside-image {filter: sepia(100%) brightness(85%) contrast(130%) saturate(150%);}
+
+.events-aside {
+  position: absolute;
+  margin: 50px;
+  z-index: 2;
+}
+
+.event-inside { width: 100%; }
 
 .article-categories-image {
   height: 100%;
