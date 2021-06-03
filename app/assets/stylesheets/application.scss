@@ -113,15 +113,12 @@ form > .field { width: 280px; }
 
 .article-main-image {filter: grayscale(30%);}
 
-.article-aside-image {filter: grayscale(90%) brightness(75%) contrast(110%);}
-
 .events-aside {
-  position: absolute;
-  margin: 50px;
-  z-index: 2;
+  background-image: url("events.jpg");
+  background-size: cover;
 }
 
-.event-inside { text-shadow: 0 0 3px $gray; }
+.event-inside { text-shadow: 1px 0 5px $gray; }
 
 .article-categories-image {
   height: 100%;
