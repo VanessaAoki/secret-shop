@@ -113,7 +113,7 @@ form > .field { width: 280px; }
 
 .article-main-image {filter: grayscale(30%);}
 
-.article-aside-image {filter: sepia(100%) brightness(85%) contrast(130%) saturate(150%);}
+.article-aside-image {filter: grayscale(90%) brightness(85%) contrast(130%);}
 
 .events-aside {
   position: absolute;
