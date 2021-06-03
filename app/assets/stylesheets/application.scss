@@ -165,6 +165,16 @@ form > .field { width: 280px; }
   text-overflow: ellipsis;
 }
 
+.patch-image-container {
+  position: relative;
+}
+
+.patch-image {
+  width: 100%;
+  max-height: 65vh;
+  overflow: hidden;
+}
+
 .sign-in {
   width: 280px;
   display: flex;

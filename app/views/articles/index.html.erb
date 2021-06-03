@@ -8,31 +8,42 @@
   </div>
   <%# EVENTS SECTION %>
   <div class="events-aside column p-0 article-side is-3">
-    <section><%= render 'events' %></section>
+    <section><%= render 'categories/events' %></section>
   </div>
   <%# FIRST %>
   <div class="column p-0 article-categories is-3">
-    <section><%= render 'first' %></section>
+    <section><%= render 'categories/first' %></section>
     <div class="dummy"></div>
     <%= image_tag ("/assets/valorant.jpg"), class:'article-categories-image' %>
   </div>
   <%# SECOND %>
   <div class="column p-0 article-categories is-3">
-    <section><%= render 'second' %></section>
+    <section><%= render 'categories/second' %></section>
     <div class="dummy"></div>
     <%= image_tag ("/assets/pubg.jpg"), class:'article-categories-image' %>
   </div>
   <%# THIRD %>
   <div class="column p-0 article-categories is-3">
-    <section><%= render 'third' %></section>
+    <section><%= render 'categories/third' %></section>
     <div class="dummy"></div>
     <%= image_tag ("/assets/fnatic.png"), class:'article-categories-image' %>
   </div>
   <%# FOURTH %>
   <div class="column p-0 article-categories is-3">
-    <section><%= render 'fourth' %></section>
+    <section><%= render 'categories/fourth' %></section>
     <div class="dummy"></div>
     <%= image_tag ("/assets/csgo.jpg"), class:'article-categories-image' %>
+  </div>
+</div>
+
+<%# PATCH NOTES %>
+<div class="columns patch-notes my-6 ml-4 mr-2">
+  <div class="column is-9 patch-image-container p-0">
+    <section><%= render 'categories/patch' %></section>
+    <%= image_tag ("/assets/tft.jpg"), class:'patch-image' %>
+  </div>
+  <div class="column is-3 p-0">
+  TEST
   </div>
 </div>
 
