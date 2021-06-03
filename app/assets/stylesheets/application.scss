@@ -175,6 +175,8 @@ form > .field { width: 280px; }
   overflow: hidden;
 }
 
+.patch-link:hover {color: $accent;}
+
 .sign-in {
   width: 280px;
   display: flex;

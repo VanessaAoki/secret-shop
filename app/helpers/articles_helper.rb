@@ -28,4 +28,13 @@ module ArticlesHelper
     end
     out.html_safe
   end
+  
+  def show_patch_article_list(articles)
+    out = ''
+    articles.each do |article|
+      out += "<li class=\"is-align-self-flex-end has-text-accent\">#{article.created_at.to_s(:time)}</li>"
+      out += "<li class=\"mb-4\">#{link_to article.text, article_url(article), class: 'patch-link'}</li>"
+    end
+    out.html_safe
+  end
 end
