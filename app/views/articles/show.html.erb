@@ -2,11 +2,11 @@
 
 <div class="show-container is-flex is-flex-direction-column is-align-items-center has-text-main">
   <h1 class="is-align-self-flex-start mb-1 is-size-4 has-text-weight-bold has-text-accent"><%= @article.title %></h1>
-  <span class="is-align-self-flex-start mb-1 is-size-7 has-text-grey"><%= @article.created_at %></span>
+  <span class="is-align-self-flex-start mb-1 is-size-7 has-text-grey"><%= @article.created_at.to_date.iso8601 %></span>
   <div class="show-image"><%= image_tag(@article.image) if @article.image.attached? %></div>
   <div class="has-text-justified"><%= @article.text %></div>
   <div class="is-align-self-flex-start is-flex is-align-items-center my-5">
-    <button class="button is-accent mr-2"><%= vote_button(@article) %></button>
+    <button class="button is-accent mr-2 px-4"><%= vote_button(@article) %></button>
     <%= @article.votes.count %> <%= (@article.votes.count) == 1 ? 'Vote' : 'Votes' %>
   </div>
   <%= articles_controller(@article) %>
