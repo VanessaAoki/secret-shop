@@ -110,12 +110,15 @@ form > .field { width: 280px; }
   z-index: 2;
 }
 
-.four-title {
+.four-title,
+.main-text {
   position: absolute;
   bottom: 20px;
   left: 16px;
   z-index: 2;
 }
+
+.article-main { position: relative; }
 
 .article-main-image,
 .article-aside-image {
