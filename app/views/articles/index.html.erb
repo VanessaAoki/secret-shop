@@ -1,26 +1,35 @@
 <p id="notice"><%= notice %></p>
 
 <div class="columns articles-home is-multiline mt-1">
+  <%# MAIN IMAGE %>
   <div class="column p-0 article-main is-9">
     <%= image_tag ("/assets/dota.jpg"), class:'article-main-image' %>
   </div>
+  <%# EVENTS SECTION %>
   <div class="events-aside column p-0 article-side is-3">
     <section><%= render 'events' %></section>
-    </div>
-
+  </div>
+  <%# FIRST %>
   <div class="column p-0 article-categories is-3">
+    <section><%= render 'first' %></section>
     <div class="dummy"></div>
     <%= image_tag ("/assets/valorant.jpg"), class:'article-categories-image' %>
   </div>
+  <%# SECOND %>
   <div class="column p-0 article-categories is-3">
+    <section><%= render 'second' %></section>
     <div class="dummy"></div>
     <%= image_tag ("/assets/pubg.jpg"), class:'article-categories-image' %>
   </div>
+  <%# THIRD %>
   <div class="column p-0 article-categories is-3">
+    <section><%= render 'third' %></section>
     <div class="dummy"></div>
     <%= image_tag ("/assets/fnatic.png"), class:'article-categories-image' %>
   </div>
+  <%# FOURTH %>
   <div class="column p-0 article-categories is-3">
+    <section><%= render 'fourth' %></section>
     <div class="dummy"></div>
     <%= image_tag ("/assets/csgo.jpg"), class:'article-categories-image' %>
   </div>
@@ -30,16 +39,3 @@
 <div class="columns articles-home is-multiline">
   <%= show_new_article_list(@articles) %>
 </div>
-
-
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-</table>
-
-<br>
-

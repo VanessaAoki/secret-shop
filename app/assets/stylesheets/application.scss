@@ -102,6 +102,21 @@ form > .field { width: 280px; }
   margin-top: 80%;
 }
 
+.four-category {
+  position: absolute;
+  border-bottom: 3px solid $accent;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+}
+
+.four-title {
+  position: absolute;
+  bottom: 20px;
+  left: 16px;
+  z-index: 2;
+}
+
 .article-main-image,
 .article-aside-image {
   float: left;
@@ -189,7 +204,7 @@ form > .field { width: 280px; }
 
 .new-container {
   background-color: white;
-  padding: 50px;
+  padding: 90px 0 100px 0;
   border: 1px solid $gray;
   width: 70vw;
   margin: 50px auto;
