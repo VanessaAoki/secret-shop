@@ -13,15 +13,17 @@ class VoteController < ApplicationController
   end
 
   def destroy
-    if !(already_voted?)
-      redirect_to articles_path, alert: 'You cannot unvote an article that you did not vote before.'
-    else vote
+    if already_voted?
+      vote
       vote.destroy
       redirect_to articles_path, notice: 'You unvoted an article.'
+    else
+      redirect_to articles_path, alert: 'You cannot unvote an article that you did not vote before.'
     end
   end
 
-  private  
+  private
+
   def find_article
     @article = Article.find(params[:article_id])
   end
@@ -32,5 +34,5 @@ class VoteController < ApplicationController
 
   def find_vote
     @vote = @article.votes.find(params[:id])
- end
+  end
 end

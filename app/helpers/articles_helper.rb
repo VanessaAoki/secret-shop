@@ -1,6 +1,6 @@
 module ArticlesHelper
   def articles_controller(article)
-    out = "<div class=\"is-flex\">"
+    out = '<div class="is-flex">'
     if current_user.admin == true
       out += link_to 'Edit', edit_article_path(@article), class: 'button is-warning mr-2'
       out += button_to 'Delete', article, method: :delete, data: { confirm: 'Are you sure?' },
@@ -28,7 +28,7 @@ module ArticlesHelper
     end
     out.html_safe
   end
-  
+
   def show_patch_article_list(articles)
     out = ''
     articles.each do |article|
