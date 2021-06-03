@@ -40,11 +40,21 @@ a:active {
   color: white;
 }
 
+.is-main:hover {
+  background-color: $main;
+  color: $accent;
+}
+
 .has-text-main { color: $main; }
 
 .is-accent {
   background-color: $accent;
   color: white;
+}
+
+.is-accent:hover {
+  background-color: $accent;
+  color: $main;
 }
 
 .has-text-accent { color: $accent; }

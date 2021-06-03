@@ -22,7 +22,7 @@ module ArticlesHelper
       out += "<h2 class=\"my-5 has-text-weight-semibold\">#{article.title}</h2>"
       out += "<p class=\"mb-5 has-text-weight-normal articles-news-main\">#{article.text}</p>"
       out += "<span class=\"mb-5 has-text-accent is-size-09 has-text-weight-normal\">#{link_to 'Read More',
-                                                                                               article_url(article)}"
+                                                                                              article_url(article)}"
       out += '</span>'
       out += '</div>'
     end
@@ -34,6 +34,16 @@ module ArticlesHelper
     articles.each do |article|
       out += "<li class=\"is-align-self-flex-end has-text-accent\">#{article.created_at.to_s(:time)}</li>"
       out += "<li class=\"mb-4\">#{link_to article.text, article_url(article), class: 'patch-link'}</li>"
+    end
+    out.html_safe
+  end
+
+  def show_category(article)
+    out = ''
+    article.categories.each do |category|
+      category.articles.each do |article|
+        out += link_to category.name, category_url(category)
+      end
     end
     out.html_safe
   end
