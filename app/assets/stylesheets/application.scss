@@ -113,7 +113,7 @@ form > .field { width: 280px; }
 
 .article-main-image {filter: grayscale(30%);}
 
-.article-aside-image {filter: grayscale(90%) brightness(85%) contrast(130%);}
+.article-aside-image {filter: grayscale(90%) brightness(75%) contrast(110%);}
 
 .events-aside {
   position: absolute;
@@ -121,7 +121,7 @@ form > .field { width: 280px; }
   z-index: 2;
 }
 
-.event-inside { width: 100%; }
+.event-inside { text-shadow: 0 0 3px $gray; }
 
 .article-categories-image {
   height: 100%;
