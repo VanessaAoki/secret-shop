@@ -1,7 +1,6 @@
-<h1>  <%= @category.name %>
-</h1>
+<h1>  <%= @category.name %> </h1>
 
-<%= @recent_related_articles %>
+<%= show_article(@category) %>
 
 
 <%= link_to 'Back', root_path %>
