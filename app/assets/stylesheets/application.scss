@@ -179,12 +179,45 @@ form > .field { width: 280px; }
   background-color: white;
   padding: 50px;
   border: 1px solid $gray;
+  margin: 50px auto;
 }
 
 .show-image {
   width:75%;
   margin: 30px 0;
 }
+
+.new-container {
+  background-color: white;
+  padding: 50px;
+  border: 1px solid $gray;
+  width: 70vw;
+  margin: 50px auto;
+}
+
+.new-body { width: 70%;}
+
+#new_article { 
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#article_title {min-height: 50px;}
+
+.new-fields {flex-wrap: wrap;}
+
+#article_image {padding: 4px 5px 2px 5px;}
+
+.button-back-new {border: 2px solid $main;}
+
+.button-back-new:hover {
+  border: 2px solid $main;
+  background-color: $main;
+  color: white;
+}
+
+.submit-button:hover {background-color: $accent;}
 
 footer {
   border-top: 1px solid rgb(48, 48, 48);
@@ -231,8 +264,7 @@ footer {
   .cancel-update-button { width: 120px; }
 
   .show-container {
-    width: 70%;
-    margin: 50px auto;
+    width: 90vw;
   }
 }
 
@@ -266,7 +298,6 @@ footer {
   .cancel-update-button { width: 120px; }
 
   .show-container {
-    width: 90vh;
-    margin: 50px auto;
+    width: 70vw;
   }
 }
