@@ -75,21 +75,17 @@ a:active {
   font-weight: 700;
 }
 
- /* Dropdown Button */
- .dropbtn {cursor: pointer;}
+.dropbtn {cursor: pointer;}
 
-/* Dropdown button on hover & focus */
 .dropbtn:hover, .dropbtn:focus {
   background-color: white;
 }
 
-/* The container <div> - needed to position the dropdown content */
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
-/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -99,7 +95,6 @@ a:active {
   z-index: 1;
 }
 
-/* Links inside the dropdown */
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
@@ -107,14 +102,9 @@ a:active {
   display: block;
 }
 
-/* Change color of dropdown links on hover */
 .dropdown-content a:hover {background-color: #ddd}
 
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;} 
-
-
-
 
 .box {
   background-color: hsl(0, 0%, 85%);
@@ -188,6 +178,15 @@ form > .field { width: 280px; }
 }
 
 .event-inside { text-shadow: 1px 0 5px $gray; }
+
+.categories-show {height: 20vh;}
+
+.categories-show-image {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+}
 
 .image-container {position: relative;}
 
