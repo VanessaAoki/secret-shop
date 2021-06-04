@@ -1,6 +1,10 @@
-<h1>  <%= @category.name %> </h1>
+<div class="columns my-6">
+  <div class="column is-10 is-offset-1 has-background-white p-6">
+    <h1 class="has-text-accent has-text-weight-bold is-size-4 mb-3"><%= @category.name %></h1>
 
-<%= show_article(@category) %>
+    <article><%= show_article(@category) %></article>
+    <article><%= no_recent %></article>
 
-
-<%= link_to 'Back', root_path %>
+    <button class="button is-accent m-0"><%= link_to 'Back to home', root_path %></button>
+  </div>
+</div>

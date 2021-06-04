@@ -3,8 +3,8 @@ module CategoriesHelper
     out = "<div class=\"columns is-multiline\">"
     category.articles.each do |article|
       article.categories.each do |category|
-        out += "<div class=\"column is-4\">"
-        out += image_tag article.image, class: '' if article.image.attached?
+        out += "<div class=\"column is-4 image-container\">"
+        out += image_tag article.image, class: 'categories-show-image' if article.image.attached?
         out += '</div>'
         out += '<div class="column is-8 p-5 article-news has-background-white has-text-main has-text-weight-bold">'
         out += "<h2 class=\"my-5 has-text-weight-semibold\">#{article.title}</h2>"
@@ -13,6 +13,14 @@ module CategoriesHelper
         out += '</span>'
         out += '</div>'
       end
+    end
+    out.html_safe
+  end
+
+  def no_recent
+    out = ''
+    if @recent_related_articles.empty?
+      out += "<p class=\"has-text-main my-6\">There are no articles in this category yet.</p>"
     end
     out.html_safe
   end
