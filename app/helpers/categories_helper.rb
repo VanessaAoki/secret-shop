@@ -5,7 +5,7 @@ module CategoriesHelper
       article.categories.each do |category|
         out += "<article class=\"columns column is-12 categories-show p-0 m-0 mb-4\">"
         out += "<div class=\"column is-4 image-container p-0\">"
-        out += image_tag article.image, class: 'categories-show-image' if article.image.attached?
+        out += image_tag article.image, class: 'categories-show-image px-5' if article.image.attached?
         out += '</div>'
         out += '<div class="column is-8 p-4 article-news has-background-white has-text-main is-flex is-flex-direction-column is-justify-content-space-around">'
         out += "<h2 class=\"has-text-weight-semibold\">#{article.title}</h2>"
