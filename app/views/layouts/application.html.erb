@@ -20,28 +20,22 @@
       <div class="navbar-item is-hidden-touch">
         <div class="field is-grouped">
           <span>
-            <%= link_to 'HOME', root_path, class: 'button is-navbar px-1 is-size-09' %>
+            <%= link_to 'NEWS', category_path(Category.find(1)), class: 'button is-navbar pr-3 is-size-09' %>
           </span>
           <span>
-            <%= link_to 'NEWS', category_path(Category.find(1)), class: 'button is-navbar px-1 is-size-09' %>
+            <%= link_to 'DOTA 2', category_path(Category.find(5)), class: 'button is-navbar pr-3 is-size-09' %>
           </span>
           <span>
-            <%= link_to 'EVENTS', category_path(Category.find(2)), class: 'button is-navbar px-1 is-size-09' %>
+            <%= link_to 'CS:GO', category_path(Category.find(8)), class: 'button is-navbar pr-3 is-size-09' %>
           </span>
           <span>
-            <%= link_to 'DOTA 2', category_path(Category.find(5)), class: 'button is-navbar px-1 is-size-09' %>
+            <%= link_to 'VALORANT', category_path(Category.find(6)), class: 'button is-navbar pr-3 is-size-09' %>
           </span>
           <span>
-            <%= link_to 'CS:GO', category_path(Category.find(8)), class: 'button is-navbar px-1 is-size-09' %>
-          </span>
-          <span>
-            <%= link_to 'VALORANT', category_path(Category.find(6)), class: 'button is-navbar px-1 is-size-09' %>
-          </span>
-          <span>
-            <%= link_to 'LOL', category_path(Category.find(7)), class: 'button is-navbar px-1 is-size-09' %>
+            <%= link_to 'LOL', category_path(Category.find(7)), class: 'button is-navbar pr-3 is-size-09' %>
           </span>
           <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn button is-navbar px-1 is-size-09">MORE</button>
+            <button onclick="myFunction()" class="dropbtn button is-navbar pr-1 is-size-09">MORE<i class="fas fa-sort-down pl-1 pb-2"></i></button>
             <div id="myDropdown" class="dropdown-content">
               <%= link_to 'Events', category_path(Category.find(2)), class: 'is-size-09 has-text-semibold' %>
               <%= link_to 'Patch Notes', category_path(Category.find(3)), class: 'is-size-09 has-text-semibold' %>
