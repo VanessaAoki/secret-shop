@@ -34,6 +34,8 @@ gem 'bulma-rails', '~> 0.9.1'
 gem 'simple_form', '~> 5.1'
 # Gravatar
 gem 'gravatar_image_tag', '~> 1.2'
+# Jquery
+gem 'jquery-rails', '~> 4.4'
 # Font Awesome for rails
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.7'
 # Reduces boot times through caching; required in config/boot.rb
