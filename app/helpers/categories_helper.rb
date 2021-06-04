@@ -14,9 +14,9 @@ module CategoriesHelper
         out += '</span>'
         out += '</div>'
         out += '</article>'
-        out += '</div>'
       end
     end
+    out += '</div>'
     out.html_safe
   end
 
