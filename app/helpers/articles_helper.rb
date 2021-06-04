@@ -12,7 +12,8 @@ module ArticlesHelper
 
   def show_new_article_list(articles)
     out = ''
-    articles.each do |article|
+    @news = Category.find(1)
+    @news.articles.each do |article|
       out += '<div class="column p-0 article-categories is-3">'
       out += '<div class="dummy"></div>'
       out += image_tag article.image, class: 'article-categories-image' if article.image.attached?
@@ -31,7 +32,8 @@ module ArticlesHelper
 
   def show_patch_article_list(articles)
     out = ''
-    articles.each do |article|
+    @patch = Category.find(3)
+    @patch.articles.each do |article|
       out += "<li class=\"is-align-self-flex-end has-text-accent\">#{article.created_at.to_s(:time)}</li>"
       out += "<li class=\"mb-4\">#{link_to article.text, article_url(article), class: 'patch-link'}</li>"
     end
@@ -42,6 +44,17 @@ module ArticlesHelper
     out = ''
     article.categories.each do |category|
       out += link_to category.name, category_url(category), class: 'button is-small is-main'
+    end
+    out.html_safe
+  end
+
+  def show_latest(category)
+    out = ''
+    category.articles.each do |article|
+      article.categories.each do |category|
+      out += link_to category.name, category_url(category), class: 'four-category is-size-5 has-text-weight-bold ml-2'
+      out += link_to category.articles.last.title, article_url(article), class: 'four-title has-text-weight-bold ml-2'
+      end
     end
     out.html_safe
   end
