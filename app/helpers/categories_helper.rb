@@ -20,6 +20,19 @@ module CategoriesHelper
     out.html_safe
   end
 
+  def show_events(category)
+    out = ''
+    category.articles.each do |article|
+      article.categories.each do |category|
+        out += "<article class=\"my-3\">"
+        out += "<span>#{article.text}</span>"
+        out += "<p class=\"is-size-5 has-text-weight-semibold\">#{article.title}</p>"
+        out += '</article>'
+      end
+    end
+    out.html_safe
+  end
+
   def no_recent
     out = ''
     if @recent_related_articles.empty?
