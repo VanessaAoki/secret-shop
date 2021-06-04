@@ -10,7 +10,7 @@
       <div class="new-fields column is-flex p-0 pt-4 pl-4">
         <%= fields_for(@selected) do |s| %>
           <strong class="mr-4"><%= s.label :categories %>:</strong>
-          <%= s.collection_select(:selected_id, @categories, :id, :name, {selected: 2, include_hidden: false}, { multiple: true }) %>
+          <%= s.collection_select(:selected_id, @categories, :id, :name, {include_hidden: false}, { multiple: true }) %>
         <% end %>
       </div>
     </div>

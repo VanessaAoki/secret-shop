@@ -18,6 +18,7 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1/edit
   def edit
+    @categories = Category.all
     @article.image.attach(params[:image])
   end
 
@@ -63,6 +64,7 @@ class ArticlesController < ApplicationController
 
   def set_article
     @article = Article.find(params[:id])
+    @categories = Category.all
   end
 
   def article_params
