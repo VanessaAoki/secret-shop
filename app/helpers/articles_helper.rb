@@ -41,9 +41,7 @@ module ArticlesHelper
   def show_category(article)
     out = ''
     article.categories.each do |category|
-      category.articles.each do |article|
-        out += link_to category.name, category_url(category)
-      end
+      out += link_to category.name, category_url(category), class: 'button is-small is-main'
     end
     out.html_safe
   end

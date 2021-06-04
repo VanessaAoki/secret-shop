@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <div class="show-container is-flex is-flex-direction-column is-align-items-center has-text-main">
-  <span class="is-align-self-flex-start mb-1 button is-small is-main"><%= show_category(@article) %></span>
+  <span class="is-align-self-flex-start mb-1"><%= show_category(@article) %></span>
   <h1 class="is-align-self-flex-start mb-1 is-size-4 has-text-weight-bold has-text-accent"><%= @article.title %></h1>
     <span class="is-align-self-flex-start mb-1 is-size-7 has-text-grey"><%= @article.created_at.to_date.iso8601 %></span>
   <div class="show-image"><%= image_tag(@article.image) if @article.image.attached? %></div>

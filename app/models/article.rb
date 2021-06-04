@@ -8,7 +8,7 @@ class Article < ApplicationRecord
   has_one_attached :image
 
   validates :title, presence: true, length: { minimum: 5, maximum: 50 }
-  validates :text, presence: true, length: { minimum: 5, maximum: 500 }
+  validates :text, presence: true, length: { minimum: 5 }
   scope :most_popular, -> { find_by(votes_count: maximum(:votes_count)) }
   scope :ordered_by_most_recent, -> { order(created_at: :desc) }
 end

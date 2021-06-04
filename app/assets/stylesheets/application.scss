@@ -223,7 +223,8 @@ form > .field { width: 280px; }
   max-height: 55vh;
 }
 
-.patch-image {
+.patch-image,
+.show-image > img  {
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -300,8 +301,6 @@ form > .field { width: 280px; }
   background-color: $main;
   color: white;
 }
-
-.submit-button:hover { background-color: $accent; }
 
 footer {
   border-top: 1px solid $main;
