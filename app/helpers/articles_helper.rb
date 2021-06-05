@@ -10,6 +10,14 @@ module ArticlesHelper
     out.html_safe
   end
 
+  def default_image(article)
+    if article.image.attached?
+      image_tag article.image
+    else
+      image_tag ("/assets/news.jpg")
+    end
+  end
+
   def new_default_image(article)
     if article.image.attached?
       image_tag article.image, class: 'article-categories-image'
@@ -28,7 +36,7 @@ module ArticlesHelper
       out += '</div>'
       out += '<div class="column p-5 article-news is-3 has-background-white has-text-main has-text-weight-bold">'
       out += '<h1 class="has-text-accent">News</h1>'
-      out += "<h2 class=\"my-5 has-text-weight-semibold\">#{article.title}</h2>"
+      out += "<h2 class=\"my-5 has-text-weight-semibold\">#{link_to article.title, article_url(article)}</h2>"
       out += "<p class=\"mb-5 has-text-weight-normal articles-news-main\">#{article.text}</p>"
       out += "<span class=\"mb-5 has-text-accent is-size-09 has-text-weight-normal\">#{link_to 'Read More',
                                                                                               article_url(article)}"
@@ -49,11 +57,10 @@ module ArticlesHelper
   def show_releases_article_list(articles)
     out = ''
     @releases = Category.find(4)
-    latest = Article.last(2)
     @releases.articles.each do |article|
       out += '<div class="column p-5 article-news is-3 has-background-white has-text-main has-text-weight-bold">'
       out += '<h1 class="has-text-accent">Latest Releases</h1>'
-      out += "<h2 class=\"my-5 has-text-weight-semibold\">#{article.title}</h2>"
+      out += "<h2 class=\"my-5 has-text-weight-semibold\">#{link_to article.title, article_url(article)}</h2>"
       out += "<p class=\"mb-5 has-text-weight-normal articles-news-main\">#{article.text}</p>"
       out += "<span class=\"mb-5 has-text-accent is-size-09 has-text-weight-normal\">#{link_to 'Read More',
                                                                                               article_url(article)}"
