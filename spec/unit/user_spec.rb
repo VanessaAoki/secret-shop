@@ -1,9 +1,9 @@
+# rubocop:disable Metrics/BlockLength
 require 'rails_helper'
 
 RSpec.feature 'Users', type: :feature do
   describe 'Sign in and sign up' do
     before :each do
-      user = User.create!(name: 'Admin', email: 'admin@admin.com', password: '123456')
       Category.create(id: 1, name: 'News', priority: 1)
       Category.create(id: 2, name: 'Events', priority: 2)
       Category.create(id: 3, name: 'Patch Notes', priority: 2)
@@ -13,7 +13,7 @@ RSpec.feature 'Users', type: :feature do
       Category.create(id: 7, name: 'LOL', priority: 3)
       Category.create(id: 8, name: 'CS:GO', priority: 3)
     end
-  
+
     scenario 'Sign up with valid inputs' do
       visit new_user_registration_path
       fill_in 'Name', with: 'Foo Bar'
@@ -47,7 +47,7 @@ RSpec.feature 'Users', type: :feature do
       sleep(3)
       expect(page).to have_content('Foo Bar')
     end
-  
+
     scenario 'Log in with invalid inputs' do
       visit new_user_session_path
       fill_in 'Email', with: 'Banana'
@@ -58,3 +58,4 @@ RSpec.feature 'Users', type: :feature do
     end
   end
 end
+# rubocop:enable Metrics/BlockLength

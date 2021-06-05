@@ -26,8 +26,7 @@ RSpec.describe 'Votes', type: :feature do
     click_on 'Click to Vote!'
     expect(page).to have_content('Vote')
   end
-  
-  
+
   let(:user) { User.create(name: 'Foo Bar', email: 'foo@bar.com', password: '12345678', admin: true) }
   scenario 'Dislike post' do
     visit new_user_session_path

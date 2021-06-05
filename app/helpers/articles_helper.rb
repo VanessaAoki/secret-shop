@@ -1,3 +1,4 @@
+# rubocop:disable Metrics/ModuleLength
 module ArticlesHelper
   def articles_controller(article)
     out = '<div class="is-flex">'
@@ -14,7 +15,7 @@ module ArticlesHelper
     if article.image.attached?
       image_tag article.image
     else
-      image_tag ("/assets/news.jpg")
+      image_tag('/assets/news.jpg')
     end
   end
 
@@ -22,11 +23,11 @@ module ArticlesHelper
     if article.image.attached?
       image_tag article.image, class: 'article-categories-image'
     else
-      image_tag ("/assets/news.jpg"), class: 'article-categories-image'
+      image_tag '/assets/news.jpg', class: 'article-categories-image'
     end
   end
 
-  def show_new_article_list(articles)
+  def show_new_article_list(_articles)
     out = ''
     @news = Category.find(1)
     @news.articles.each do |article|
@@ -39,7 +40,7 @@ module ArticlesHelper
       out += "<h2 class=\"my-5 has-text-weight-semibold\">#{link_to article.title, article_url(article)}</h2>"
       out += "<p class=\"mb-5 has-text-weight-normal articles-news-main\">#{article.text}</p>"
       out += "<span class=\"mb-5 has-text-accent is-size-09 has-text-weight-normal\">#{link_to 'Read More',
-                                                                                              article_url(article)}"
+                                                                                               article_url(article)}"
       out += '</span>'
       out += '</div>'
     end
@@ -50,11 +51,11 @@ module ArticlesHelper
     if article.image.attached?
       image_tag article.image, class: 'article-categories-image'
     else
-      image_tag ("/assets/2021.jpg"), class: 'article-categories-image'
+      image_tag '/assets/2021.jpg', class: 'article-categories-image'
     end
   end
 
-  def show_releases_article_list(articles)
+  def show_releases_article_list(_articles)
     out = ''
     @releases = Category.find(4)
     @releases.articles.each do |article|
@@ -63,7 +64,7 @@ module ArticlesHelper
       out += "<h2 class=\"my-5 has-text-weight-semibold\">#{link_to article.title, article_url(article)}</h2>"
       out += "<p class=\"mb-5 has-text-weight-normal articles-news-main\">#{article.text}</p>"
       out += "<span class=\"mb-5 has-text-accent is-size-09 has-text-weight-normal\">#{link_to 'Read More',
-                                                                                              article_url(article)}"
+                                                                                               article_url(article)}"
       out += '</span>'
       out += '</div>'
       out += '<div class="column p-0 article-categories is-3">'
@@ -74,12 +75,13 @@ module ArticlesHelper
     out.html_safe
   end
 
-  def show_patch_article_list(articles)
+  def show_patch_article_list(_articles)
     out = ''
     @patch = Category.find(3)
     @patch.articles.each do |article|
       out += "<li class=\"is-align-self-flex-end has-text-accent\">#{article.created_at.to_s(:time)}</li>"
-      out += "<li class=\"mb-4\">#{link_to article.title, article_url(article), class: 'patch-link is-family-monospace is-uppercase'}</li>"
+      out += "<li class=\"mb-4\">#{link_to article.title, article_url(article),
+                                           class: 'patch-link is-family-monospace is-uppercase'}</li>"
     end
     out.html_safe
   end
@@ -95,9 +97,9 @@ module ArticlesHelper
   def show_latest(category)
     out = ''
     category.articles.each do |article|
-      article.categories.each do |category|
-      out += link_to category.name, category_url(category), class: 'four-category is-size-5 has-text-weight-bold ml-2'
-      out += link_to category.articles.last.title, article_url(article), class: 'four-title has-text-weight-bold ml-2'
+      article.categories.each do |cat|
+        out += link_to cat.name, category_url(cat), class: 'four-category is-size-5 has-text-weight-bold ml-2'
+        out += link_to cat.articles.last.title, article_url(article), class: 'four-title has-text-weight-bold ml-2'
       end
     end
     out.html_safe
@@ -106,11 +108,13 @@ module ArticlesHelper
   def show_first(category)
     out = ''
     category.articles.each do |article|
-      article.categories.each do |category|
-      out += link_to category.name, category_url(category), class: 'four-category is-size-5 has-text-weight-bold ml-2'
-      out += link_to category.articles.first.title, article_url(article), class: 'four-title has-text-weight-bold ml-2 is-family-monospace is-uppercase'
+      article.categories.each do |cat|
+        out += link_to cat.name, category_url(cat), class: 'four-category is-size-5 has-text-weight-bold ml-2'
+        out += link_to cat.articles.first.title, article_url(article),
+                       class: 'four-title has-text-weight-bold ml-2 is-family-monospace is-uppercase'
       end
     end
     out.html_safe
   end
 end
+# rubocop:enable Metrics/ModuleLength
