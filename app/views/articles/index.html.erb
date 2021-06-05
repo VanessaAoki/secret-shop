@@ -40,7 +40,7 @@
 <div class="columns patch-notes my-6 ml-4 mr-2">
   <div class="column is-3 p-0 patch-aside-container my-2">
     <ul class="is-flex is-flex-direction-column px-6">
-      <h1 class="has-text-accent has-text-weight-semibold is-family-monospace is-uppercase">Latest Patch Notes</h1>
+      <%= link_to 'Latest Patch Notes', category_path(Category.find(3)), class: 'has-text-accent has-text-weight-semibold is-family-monospace is-uppercase' %>
       <%= show_patch_article_list(@articles) %>
     </ul>
   </div>
@@ -50,7 +50,7 @@
   </div>
   <div class="column is-3 p-0 patch-aside-container my-2">
     <ul class="is-flex is-flex-direction-column px-6">
-      <h1 class="has-text-accent has-text-weight-semibold is-family-monospace is-uppercase mb-3">Search by category</h1>
+      <%= link_to 'Search by category:', categories_path, class: 'has-text-accent has-text-weight-semibold is-family-monospace is-uppercase mb-3' %>
       <%= show_all_categories %>
     </ul>
   </div>

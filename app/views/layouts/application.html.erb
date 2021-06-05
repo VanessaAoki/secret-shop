@@ -13,7 +13,7 @@
     <nav class="navbar has-background-white is-fixed-top is-flex is-justify-content-space-between">
   		<div class="navbar-brand">
         <%= link_to root_path, class: "navbar-item" do %>
-          <h1 class="title is-4 has-text-main">Secret shop</h1>
+          <h1 class="title"><%= image_tag ("/assets/logo.png"), class: 'mt-1' %></h1>
         <% end %>
   	  </div>
 
@@ -58,7 +58,7 @@
   <footer class="is-main is-flex is-align-items-center is-justify-content-space-between mt-4">
     <div class="navbar-brand">
       <%= link_to root_path, class: "navbar-item" do %>
-        <h1 class="title is-4 has-text-white">Secret shop</h1>
+        <h1 class="title"><%= image_tag ("/assets/logo.png"), class: 'logo-footer mt-1' %></h1>
       <% end %>
     </div>
 
