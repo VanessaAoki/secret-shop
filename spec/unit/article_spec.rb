@@ -25,4 +25,32 @@ RSpec.describe 'Articles', type: :feature do
     click_on 'Create Article'
     expect(page).to have_content('Article Title')
   end
+
+  let(:user) { User.create(name: 'Foo Bar', email: 'foo@bar.com', password: '12345678', admin: true) }
+  scenario 'create an article with empty text' do
+    visit new_user_session_path
+    fill_in 'Email', with: user.email
+    fill_in 'Password', with: user.password
+    click_on 'Log in'
+    visit new_article_path
+    fill_in :article_title, with: 'Article Title'
+    fill_in :article_text, with: ''
+    select 'Events', from: 'selected_id'
+    click_on 'Create Article'
+    expect(page).to have_content("can't be blank")
+  end
+
+  let(:user) { User.create(name: 'Foo Bar', email: 'foo@bar.com', password: '12345678', admin: true) }
+  scenario 'create an article with empty title' do
+    visit new_user_session_path
+    fill_in 'Email', with: user.email
+    fill_in 'Password', with: user.password
+    click_on 'Log in'
+    visit new_article_path
+    fill_in :article_title, with: ''
+    fill_in :article_text, with: 'Article Text'
+    select 'Events', from: 'selected_id'
+    click_on 'Create Article'
+    expect(page).to have_content("can't be blank")
+  end
 end
