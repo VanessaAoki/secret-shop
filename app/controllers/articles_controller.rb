@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: %i[show edit update destroy]
+  before_action :set_category, only: %i[create]
   before_action :authenticate_user!, except: %i[index show]
 
   # GET /articles or /articles.json
@@ -64,6 +65,10 @@ class ArticlesController < ApplicationController
 
   def set_article
     @article = Article.find(params[:id])
+    @categories = Category.all
+  end
+
+  def set_category
     @categories = Category.all
   end
 
