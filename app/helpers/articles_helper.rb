@@ -48,8 +48,9 @@ module ArticlesHelper
 
   def show_releases_article_list(articles)
     out = ''
-    @news = Category.find(4)
-    @news.articles.each do |article|
+    @releases = Category.find(4)
+    latest = Article.last(2)
+    @releases.articles.each do |article|
       out += '<div class="column p-5 article-news is-3 has-background-white has-text-main has-text-weight-bold">'
       out += '<h1 class="has-text-accent">Latest Releases</h1>'
       out += "<h2 class=\"my-5 has-text-weight-semibold\">#{article.title}</h2>"
@@ -90,6 +91,17 @@ module ArticlesHelper
       article.categories.each do |category|
       out += link_to category.name, category_url(category), class: 'four-category is-size-5 has-text-weight-bold ml-2'
       out += link_to category.articles.last.title, article_url(article), class: 'four-title has-text-weight-bold ml-2'
+      end
+    end
+    out.html_safe
+  end
+
+  def show_first(category)
+    out = ''
+    category.articles.each do |article|
+      article.categories.each do |category|
+      out += link_to category.name, category_url(category), class: 'four-category is-size-5 has-text-weight-bold ml-2'
+      out += link_to category.articles.first.title, article_url(article), class: 'four-title has-text-weight-bold ml-2 is-family-monospace is-uppercase'
       end
     end
     out.html_safe

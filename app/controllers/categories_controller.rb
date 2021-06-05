@@ -20,7 +20,7 @@ class CategoriesController < ApplicationController
   private
 
   def recent_related_articles
-    @recent_related_articles ||= @category.articles.ordered_by_most_recent.limit(4)
+    @recent_related_articles ||= @category.articles.ordered_by_most_recent.limit(2)
   end
 
   def recent_article(category)
