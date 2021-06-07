@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
   # GET /categories or /categories.json
   def index
     @categories = Category.includes(:articles).all
-    articles = Article.all
+    @articles = Article.all
     @xcat = Category.all.order(:priority)
     @articles_by_category = []
     @categories.each do |category|
