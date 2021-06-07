@@ -30,7 +30,7 @@ Design idea by [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) on [Beh
 
 - Ruby 2.7.2;
 - Ruby on Rails 6.1.3;
-- Ruby gems: devise, simple-forms, sqlite3, puma, rubocop;
+- Ruby gems: devise, simple-forms, PG, puma, rubocop;
 - Visual Studio, Git & GitHub;
 
 ## Live Server Link
