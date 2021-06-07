@@ -22,6 +22,9 @@ You can add friends and reject friend requests.
 > In your timeline you should only see your own posts, as well as posts from your friends, so be sure to follow them! 
 
 ![screenshot](./app/assets/images/screenshot.png)
+![screenshot](./app/assets/images/screenshot2.png)
+
+Design idea by [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) on [Behance](https://www.behance.net/gallery/14554909/liFEsTlye-Mobile-version).
 
 ## Built With
 
@@ -31,7 +34,7 @@ You can add friends and reject friend requests.
 - Visual Studio, Git & GitHub;
 
 ## Live Server Link
-[Live demo link](https://vanessa-ror-social.herokuapp.com/login)
+[Live demo link](https://secret-shop.herokuapp.com/)
 
 ## Prerequisites
 To run this project, you need a computer with Ruby and Ruby on Rails installed.
