@@ -27,7 +27,7 @@ RSpec.describe 'Articles', type: :feature do
   end
 
   let(:user) { User.create(name: 'Foo Bar', email: 'foo@bar.com', password: '12345678', admin: true) }
-  scenario 'create an article with empty text' do
+  scenario 'try to create an article with empty text' do
     visit new_user_session_path
     fill_in 'Email', with: user.email
     fill_in 'Password', with: user.password
@@ -41,7 +41,7 @@ RSpec.describe 'Articles', type: :feature do
   end
 
   let(:user) { User.create(name: 'Foo Bar', email: 'foo@bar.com', password: '12345678', admin: true) }
-  scenario 'create an article with empty title' do
+  scenario 'try to create an article with empty title' do
     visit new_user_session_path
     fill_in 'Email', with: user.email
     fill_in 'Password', with: user.password
