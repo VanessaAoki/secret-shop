@@ -86,7 +86,7 @@ git@github.com:VanessaAoki/secret-shop.git
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/VanessaAoki/secret-shop/issues.
+Feel free to check the [issues page](https://github.com/VanessaAoki/secret-shop/issues).
 
 ## Show your support
 
