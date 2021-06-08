@@ -2,7 +2,7 @@
 module ArticlesHelper
   def articles_controller(article)
     out = '<div class="is-flex">'
-    if current_user.admin == true
+    if current_user.admin == true || current_user.id == article.author_id
       out += link_to 'Edit', edit_article_path(@article), class: 'button is-warning mr-2'
       out += button_to 'Delete', article, method: :delete, data: { confirm: 'Are you sure?' },
                                           class: 'button is-danger mr-2'

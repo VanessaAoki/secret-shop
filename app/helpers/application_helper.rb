@@ -23,7 +23,7 @@ module ApplicationHelper
 
   def admin_create_article
     out = ''
-    if current_user&.admin
+    if user_signed_in?
       out += '<p>'
       out += link_to 'New Article', new_article_path, class: 'button is-navbar is-capitalize is-size-09'
       out += '</p>'
