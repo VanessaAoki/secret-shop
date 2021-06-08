@@ -3,13 +3,13 @@
     <img alt="Microverse" src="https://img.shields.io/badge/-Microverse-blueviolet?style=flat-square">
   </a>
   <a href="https://github.com/VanessaAoki/ror-social-scaffold/blob/main/LICENSE">
-    <img alt="MIT Licensed" src="https://img.shields.io/github/license/VanessaAoki/ror-social-scaffold?style=flat-square">
+    <img alt="MIT Licensed" src="https://img.shields.io/github/license/VanessaAoki/secret-shop?style=flat-square">
   </a>
-  <a href="https://github.com/VanessaAoki/ror-social-scaffold">
-    <img alt="GitHub last commit (branch)" src="https://img.shields.io/github/last-commit/VanessaAoki/ror-social-scaffold/development?color=blue&style=flat-square">
+  <a href="https://github.com/VanessaAoki/secret-shop">
+    <img alt="GitHub last commit (branch)" src="https://img.shields.io/github/last-commit/VanessaAoki/secret-shop/development?color=blue&style=flat-square">
   </a>
-  <a href="https://github.com/VanessaAoki/ror-social-scaffold">
-    <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/VanessaAoki/ror-social-scaffold?color=pink&label=%E2%98%85%20stars%20&style=flat-square">
+  <a href="https://github.com/VanessaAoki/secret-shop">
+    <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/VanessaAoki/secret-shop?color=pink&label=%E2%98%85%20stars%20&style=flat-square">
   </a>
   <a href="https://github.com/VanessaAoki">
     <img alt="GitHub followers" src="https://img.shields.io/github/followers/VanessaAoki?color=yellow&logo=github&style=flat-square">
@@ -55,22 +55,24 @@ To get a local copy up and running, follow these simple steps:
 
 1. In your terminal, type the following, to clone this repository:
 ```
-git@github.com:VanessaAoki/ror-social-scaffold.git
+git@github.com:VanessaAoki/secret-shop.git
 ```
 
-2. Type  `$ cd ror-social-scaffold` to move to the project folder;
+2. Type  `$ cd secret-shop` to move to the project folder;
 
 3. Install all required gems by typing `$ bundle install` on the terminal;
 
 4. Migrate the database with `$ rails db:migrate`;
 
-5. Type `$ cd bin` to move to the bin folder, *you must be on this folder to execute the file*;
+5. Seed the database with `$ rails db:seed`;
 
-6. Execute `$ rails server` on the terminal and run `http://localhost:3000` on your browser *(Google Chrome, Mozilla Firefox, Microsoft Edge, Apple Safari, etc.)*;
+6. Type `$ cd bin` to move to the bin folder, *you must be on this folder to execute the file*;
 
-7. Explore the app, sign up - or sign in if you are already a user - write, comment and like posts;
+7. Execute `$ rails server` on the terminal and run `http://localhost:3000` on your browser *(Google Chrome, Mozilla Firefox, Microsoft Edge, Apple Safari, etc.)*;
 
-8. After you are done, stop running the server by clicking `ctrl + C` on your terminal.
+8. Explore the app, sign up - or sign in if you are already a user - write your article, navigate through all the articles, and vote(unvote) others articles;
+
+9. After you are done, stop running the server by clicking `ctrl + C` on your terminal.
 
 ## Author
 
