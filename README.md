@@ -37,7 +37,7 @@ Design idea by [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) on [Beh
 [Live demo link](https://secret-shop.herokuapp.com/)
 
 ## Video Presentation
-![video](https://player.vimeo.com/video/560232553?badge=0&autopause=0&player_id=0&app_id=58479/embed)
+https://user-images.githubusercontent.com/66967274/121113771-fca5da80-c7e8-11eb-859a-01e7dbfd1482.mp4
 
 ## Prerequisites
 To run this project, you need a computer with Ruby and Ruby on Rails installed.
