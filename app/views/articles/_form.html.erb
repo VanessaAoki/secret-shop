@@ -1,6 +1,7 @@
 <%= simple_form_for(@article) do |f| %>
   <%= f.error_notification %>
-    <%= f.input :title, label: "Article title:", input_html: { class: "textarea"}, wrapper: false, label_html: {class: "label"}, placeholder: "Title here...", autofocus: true %><br />
+    <%= f.input :title, label: "Article title:", input_html: { class: "textarea"}, wrapper: false, label_html: {class: "label"}, placeholder: "Title here...", autofocus: true %>
+    <br>
     <%= f.input :text, label: "Write your article:", input_html: { class: "textarea"}, wrapper: false, label_html: {class: "label"}, placeholder: "Article content here..." %>
     <br>
     <div class="columns">
@@ -10,7 +11,7 @@
       <div class="new-fields column is-flex p-0 pt-4 pl-4">
         <%= fields_for(@selected) do |s| %>
           <strong class="mr-4"><%= s.label :categories %>:</strong>
-          <%= s.collection_select(:selected_id, @categories, :id, :name, {include_hidden: false}, { multiple: true }) %>
+          <%= s.collection_select(:selected_id, @categories, :id, :name, {selected: 2, include_hidden: false}, { multiple: true, required: true }) %>
         <% end %>
       </div>
     </div>
