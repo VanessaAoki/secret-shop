@@ -1,4 +1,4 @@
 <div class="main-text">
-  <h1 class="is-size-5 has-text-weight-bold has-text-accent ml-2">Valve confirms The International 10 dates</h1>
-  <p class="has-text-weight-bold ml-2">Valve has confirmed that The International will return on Aug. 5 in Stockholm, Sweden. Top teams from around the world to compete for the Aegis of Champions and the record-setting $40,018,195 prize pool.</p>
+  <h1 class="is-size-5 has-text-weight-bold has-text-accent ml-2"><%= link_to @most_popular.title, article_path(@most_popular) %></h1>
+  <p class="has-text-weight-bold ml-2 articles-news-main"><%= @most_popular.text %></p>
 </div>
