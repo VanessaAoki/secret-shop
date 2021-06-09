@@ -1,0 +1,53 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+$main: #4e443e;
+$gray: #847f7b;
+$accent: #f86309;
+
+.sign-in {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sign-in-button { width: 280px; }
+
+.sign-up {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sign-up-button { width: 280px; }
+
+.sign-up-text { text-align: center; }
+
+.img-signin { width: 250px; }
+
+.columns:last-child { margin-bottom: 0; }
+
+.show-container {
+  background-color: white;
+  padding: 50px 80px;
+  border: 1px solid $gray;
+  margin: 50px auto;
+}
+
+.show-image {
+  width: 75%;
+  margin: 30px 0;
+}
+
+.new-container {
+  background-color: white;
+  padding: 90px 0 100px 0;
+  border: 1px solid $gray;
+  width: 70vw;
+  margin: 50px auto;
+}
+
+.new-body { width: 70%; }
