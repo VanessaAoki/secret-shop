@@ -70,6 +70,19 @@ module CategoriesHelper
     out.html_safe
   end
 
+  def show_latest_main(category)
+    out = ''
+    category.articles.each do |article|
+      article.categories.each do |cat|
+        out += link_to cat.name, category_url(cat), class: 'four-category is-size-5 has-text-weight-bold ml-2'
+        out += link_to cat.articles.last.title, article_url(article), class: 'four-title has-text-weight-bold ml-2'
+        out += "<div class=\"dummy\"></div>"
+        out += image_tag cat.articles.last.image, class:'article-categories-image'
+      end
+    end
+    out.html_safe
+  end
+
   def show_first(category)
     out = ''
     category.articles.each do |article|
