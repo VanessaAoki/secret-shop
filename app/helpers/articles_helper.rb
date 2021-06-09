@@ -17,6 +17,14 @@ module ArticlesHelper
     end
   end
 
+  def default_image_popular(article)
+    if article.image.attached?
+      image_tag article.image, class:'article-main-image'
+    else
+      image_tag ('/assets/news.jpg'), class:'article-main-image'
+    end
+  end
+
   def new_default_image(article)
     if article.image.attached?
       image_tag article.image, class: 'article-categories-image'
