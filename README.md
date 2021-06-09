@@ -17,9 +17,8 @@
 </p>
 
 # Secret Shop
-This is a social media app, created with Ruby on Rails, developed so users can create, commentate, and like posts.
-You can add friends and reject friend requests.
-> In your timeline you should only see your own posts, as well as posts from your friends, so be sure to follow them! 
+Secret shop is a gaming/esports articles blog, that features News, Patch Notes, Game Releases, Upcoming Events, as well as articles for the most popular games, such as CS:GO, Valorant, Dota 2 and League of Legends.
+> User must be logged in to create and vote on articles, so be sure to log in or sign up if you still haven't.
 
 ![screenshot](./app/assets/images/screenshot.png)
 ![screenshot](./app/assets/images/screenshot2.png)
