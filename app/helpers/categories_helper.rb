@@ -22,7 +22,7 @@ module CategoriesHelper
 
   def show_article(category)
     out = '<div class="columns is-multiline m-0">'
-    category.articles.each do |article|
+    category.articles.ordered_by_most_recent.each do |article|
       out += '<article class="columns column is-12 categories-show p-0 m-0 mb-4">'
       out += '<div class="column is-4 image-container p-0">'
       out += show_article_default_image(article)
