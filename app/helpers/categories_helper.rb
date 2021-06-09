@@ -58,5 +58,39 @@ module CategoriesHelper
     end
     out.html_safe
   end
+
+  def show_latest(category)
+    out = ''
+    category.articles.each do |article|
+      article.categories.each do |cat|
+        out += link_to cat.name, category_url(cat), class: 'four-category is-size-5 has-text-weight-bold ml-2'
+        out += link_to cat.articles.last.title, article_url(article), class: 'four-title has-text-weight-bold ml-2'
+      end
+    end
+    out.html_safe
+  end
+
+  def show_first(category)
+    out = ''
+    category.articles.each do |article|
+      article.categories.each do |cat|
+        out += link_to cat.name, category_url(cat), class: 'four-category is-size-5 has-text-weight-bold ml-2'
+        out += link_to cat.articles.first.title, article_url(article),
+                       class: 'four-title has-text-weight-bold ml-2 is-family-monospace is-uppercase'
+      end
+    end
+    out.html_safe
+  end
+
+  def popular_article(category)
+    out = ''
+    category.articles.each do |article|
+      article.categories.each do |cat|
+        out += link_to cat.name, category_url(cat), class: 'four-category is-size-5 has-text-weight-bold ml-2'
+        out += link_to cat.articles.most_popular.title, article_url(article), class: 'four-title has-text-weight-bold ml-2'
+      end
+    end
+    out.html_safe
+  end
 end
 # rubocop:enable Layout/LineLength

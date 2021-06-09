@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_02_052611) do
+ActiveRecord::Schema.define(version: 2021_06_09_013516) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -47,6 +50,7 @@ ActiveRecord::Schema.define(version: 2021_06_02_052611) do
     t.text "image_data"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "votes_count", default: 0
     t.index ["author_id"], name: "index_articles_on_author_id"
   end
 
@@ -85,7 +89,6 @@ ActiveRecord::Schema.define(version: 2021_06_02_052611) do
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "votes_count", default: 0
     t.index ["article_id"], name: "index_votes_on_article_id"
     t.index ["user_id"], name: "index_votes_on_user_id"
   end

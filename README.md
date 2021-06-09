@@ -18,7 +18,7 @@
 
 # Secret Shop
 Secret shop is a gaming/esports articles blog, that features News, Patch Notes, Game Releases, Upcoming Events, as well as articles for the most popular games, such as CS:GO, Valorant, Dota 2 and League of Legends.
-> User must be logged in to create and vote on articles, so be sure to log in or sign up if you still haven't.
+> The most voted articles of each category will be displayed in the main page, so be sure to vote the one you like the most!
 
 ![screenshot](./app/assets/images/screenshot.png)
 ![screenshot](./app/assets/images/screenshot2.png)
