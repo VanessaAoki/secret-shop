@@ -19,9 +19,9 @@ module ArticlesHelper
 
   def default_image_popular(article)
     if article.image.attached?
-      image_tag article.image, class:'article-main-image'
+      image_tag article.image, class: 'article-main-image'
     else
-      image_tag ('/assets/news.jpg'), class:'article-main-image'
+      image_tag '/assets/news.jpg', class: 'article-main-image'
     end
   end
 
