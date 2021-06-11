@@ -1,4 +1,5 @@
 # rubocop:disable Layout/LineLength
+# rubocop:disable Metrics/ModuleLength
 module CategoriesHelper
   def show_all_categories
     out = ''
@@ -115,3 +116,4 @@ module CategoriesHelper
   end
 end
 # rubocop:enable Layout/LineLength
+# rubocop:enable Metrics/ModuleLength
