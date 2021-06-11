@@ -1,0 +1,25 @@
+<div class="sign-up-container columns pt-6 pb-4 has-text-main">
+  <div class="sign-up-box column columns is-two-fifth has-background-white is-flex is-justify-content-end">
+    <div class="sign-up column is-narrow">
+      <h2 class="is-size-3 has-text-accent has-text-weight-semibold has-text-centered">Forgot your password?</h2>
+
+      <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+        <%= f.error_notification %>
+
+        <div class="field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autocomplete: "email" %>
+        </div>
+
+        <div class="form-actions">
+          <%= f.button :submit, "Reset my password", class: 'sign-up-button button is-accent my-4' %>
+        </div>
+      <% end %>
+      <div class="is-size-7 has-text-centered">
+        <%= render "devise/shared/links" %>
+      </div>
+    </div>
+  </div>
+  <div class=" column">
+  </div>
+</div>

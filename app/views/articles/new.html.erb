@@ -1,0 +1,9 @@
+<div class="new-container is-flex is-flex-direction-column is-align-items-center has-text-main">
+  <section class="new-body">
+  <h1 class="is-size-5 has-text-accent has-text-weight-bold mb-3">New Article</h1>
+
+  <%= render 'form', article: @article %>
+
+  <%= link_to 'Back to home', articles_path, class: "button has-text-main is-align-self-center is-outlined button-back-new mt-2" %>
+  </section>
+</div>

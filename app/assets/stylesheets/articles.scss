@@ -1,0 +1,61 @@
+// Place all the styles related to the Articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+$main: #4e443e;
+$gray: #847f7b;
+$accent: #f86309;
+
+.article-categories-image {
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  filter: grayscale(50%);
+}
+
+.article-news > h1,
+.show-container > h1 {
+  font-weight: 700;
+  display: inline;
+  border-bottom: 2.5px solid $accent;
+  padding-bottom: 2px;
+  font-size: 16px;
+}
+
+.articles-news-main {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.patch-image-container,
+.patch-aside-container {
+  position: relative;
+  max-height: 55vh;
+}
+
+.patch-image,
+.show-image > img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.patch-link:hover { color: $accent; }
+
+#new_article {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#article_title { min-height: 50px; }
+
+.new-fields { flex-wrap: wrap; }
+
+#article_image { padding: 4px 5px 2px 5px; }

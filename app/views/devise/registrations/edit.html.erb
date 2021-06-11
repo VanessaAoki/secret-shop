@@ -1,0 +1,53 @@
+<div class="sign-in-container columns mb-4 pt-6 pb-4 has-text-main">
+  <div class="sign-in-image column is-flex is-justify-content-end">
+    <%= image_tag ("/assets/controller.png"), class: "img-signin" %>
+  </div>
+  <div class="sign-in-box column columns is-two-fifth-tablet is-three-fifths-desktop has-background-white is-flex is-justify-content-start">
+    <div class="sign-in column is-narrow">
+      <h2 class="is-size-3 has-text-accent has-text-weight-semibold pb-2 has-text-centered">Update info</h2>
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
+
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+      <% end %>
+
+      <div class="field">
+        <%= f.label :password %> <br />
+        <%= f.password_field :password, autocomplete: "new-password" %> <br />
+        <i class="is-size-7">- Leave this field blank if you don't want to change it</i>
+        <% if @minimum_password_length %>
+          <br />
+         <em class="is-size-7">- <%= @minimum_password_length %> characters minimum</em>
+        <% end %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :current_password %><br />
+        <%= f.password_field :current_password, autocomplete: "current-password" %><br>
+        <i class="is-size-7">(We need your current password to confirm your changes)</i>
+      </div>
+      
+      <div class="actions is-flex is-justify-content-space-between is-align-items-center mb-2">
+        <%= f.submit "Update", class: 'update-button button is-accent my-2' %>
+        <%= link_to "Cancel", :back, class:'cancel-update-button button is-dark' %>
+      </div>
+    <% end %>
+
+    <div class="is-flex is-align-items-center">
+      <p class="is-size-7 mr-2">Unhappy? <%= button_to "Cancel account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'button is-danger is-outlined is-small' %></p>
+    </div>
+    </div>
+  </div>
+</div>

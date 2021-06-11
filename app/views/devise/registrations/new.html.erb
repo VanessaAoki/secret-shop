@@ -1,0 +1,47 @@
+<div class="sign-up-container columns pt-6 pb-4 has-text-main">
+  <div class="sign-up-box column columns is-two-fifth has-background-white is-flex is-justify-content-end">
+    <div class="sign-up column is-narrow">
+      <h2 class="is-size-3 has-text-accent has-text-weight-semibold has-text-centered">Sign Up</h2>
+
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
+
+        <div class="field">
+          <%= f.label :name %><br />
+          <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autocomplete: "email" %>
+        </div>
+
+        <div class="field mb-1">
+          <%= f.label :password %>
+          <% if @minimum_password_length %>
+          <% end %><br />
+          <%= f.password_field :password, autocomplete: "new-password" %><br>
+          <em class="is-size-7">(<%= @minimum_password_length %> characters minimum)</em>
+        </div>
+
+        <div class="field">
+          <%= f.label :password_confirmation %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "Sign up", class: 'sign-up-button button is-accent my-2' %>
+        </div>
+      <% end %>
+      <div class="is-size-7 has-text-centered">
+        Already have an account? <br><%= render "devise/shared/links" %>
+      </div>
+    </div>
+  </div>
+  <div class="columns column">
+    <div class="column is-narrow sign-up-text is-flex is-flex-direction-column is-align-items-center">
+      <h1 class="is-size-3 is-family-monospace has-text-white">Welcome to the <br><b class="has-text-accent">Secret Shop</b></h1>
+      <%= image_tag ("/assets/controller.png"), class: "img-signin" %>
+    </div>
+  </div>
+</div>

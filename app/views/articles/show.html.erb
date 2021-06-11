@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<div class="show-container is-flex is-flex-direction-column is-align-items-center has-text-main">
+  <span class="is-align-self-flex-start mb-1"><%= show_category(@article) %></span>
+  <h1 class="is-align-self-flex-start mb-1 is-size-4 has-text-weight-bold has-text-accent"><%= @article.title %></h1>
+    <span class="is-align-self-flex-start mb-1 is-size-7 has-text-grey"><%= @article.created_at.to_date.iso8601 %></span>
+  <div class="show-image"><%= default_image(@article) %></div>
+  <div class="has-text-justified mt-6"><%= @article.text %></div>
+  <div class="is-align-self-flex-start is-flex is-align-items-center my-5">
+    <%= vote_button(@article) %>
+    <span class="ml-2"><%= @article.votes.count %> <%= (@article.votes.count) == 1 ? 'Vote' : 'Votes' %></span>
+  </div>
+  <%= articles_controller(@article) %>
+</div>

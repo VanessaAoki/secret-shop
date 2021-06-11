@@ -1,0 +1,71 @@
+/*
+Place all the styles related to the Categories controller here.
+They will automatically be included in application.css.
+You can use Sass (SCSS) here: https://sass-lang.com/
+*/
+
+$main: #4e443e;
+$gray: #847f7b;
+$accent: #f86309;
+
+.articles-home { overflow: hidden; }
+
+.article-categories {
+  display: inline-block;
+  position: relative;
+  width: 50%;
+}
+
+.dummy {
+  margin-top: 80%;
+}
+
+.four-category {
+  position: absolute;
+  border-bottom: 3px solid $accent;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+}
+
+.four-title,
+.main-text {
+  position: absolute;
+  bottom: 20px;
+  left: 16px;
+  z-index: 2;
+}
+
+.four-title:hover,
+.four-category:hover { color: $accent; }
+
+.article-main { position: relative; }
+
+.article-main-image,
+.article-aside-image {
+  float: left;
+  overflow: hidden;
+  display: inline;
+  height: 60vh;
+  width: 100%;
+}
+
+.article-main-image { filter: grayscale(30%); }
+
+.events-aside {
+  background-image: url("events.jpg");
+  background-size: cover;
+}
+
+.event-inside { text-shadow: 1px 0 5px $gray; }
+
+.categories-show { min-height: 25vh; }
+
+.categories-show-image {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+
+.image-container { position: relative; }

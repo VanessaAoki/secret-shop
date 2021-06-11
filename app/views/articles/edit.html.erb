@@ -1,0 +1,12 @@
+<div class="new-container is-flex is-flex-direction-column is-align-items-center has-text-main">
+  <section class="new-body">
+  <h1 class="is-size-5 has-text-accent has-text-weight-bold mb-3">Editing Article</h1>
+
+  <%= render 'form', article: @article %>
+
+  <div class="is-flex mt-6">
+    <%= link_to 'Cancel', @article, class: 'button is-danger mr-4 px-5 mt-5' %>
+    <%= link_to 'Back to home', articles_path, class: 'button has-text-main is-outlined button-back-new mt-5' %>
+  </div>
+  </section>
+</div>

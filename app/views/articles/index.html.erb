@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<div class="columns articles-home is-multiline mt-1">
+  <%# MAIN IMAGE %>
+  <div class="column p-0 article-main is-9">
+    <section><%= render 'main' %></section>
+    <%= most_votes_images %>
+  </div>
+  <%# EVENTS SECTION %>
+  <div class="events-aside column p-0 article-side is-3">
+    <section><%= render 'categories/events' %></section>
+  </div>
+  <%# FIRST %>
+  <div class="column p-0 article-categories is-3">
+    <section><%= render 'categories/first' %></section>
+  </div>
+  <%# SECOND %>
+  <div class="column p-0 article-categories is-3">
+    <section><%= render 'categories/second' %></section>
+  </div>
+  <%# THIRD %>
+  <div class="column p-0 article-categories is-3">
+    <section><%= render 'categories/third' %></section>
+  </div>
+  <%# FOURTH %>
+  <div class="column p-0 article-categories is-3">
+    <section><%= render 'categories/fourth' %></section>
+  </div>
+</div>
+
+<%# CATEGORIES + PATCH NOTES %>
+<div class="columns patch-notes my-6 ml-4 mr-2">
+  <div class="column is-3 p-0 patch-aside-container my-2">
+    <ul class="is-flex is-flex-direction-column px-6">
+      <%= link_to 'Latest Patch Notes', category_path(Category.find(3)), class: 'has-text-accent has-text-weight-semibold is-family-monospace is-uppercase' %>
+      <%= show_patch_article_list(@articles) %>
+    </ul>
+  </div>
+  <div class="column is-6 patch-image-container p-0">
+    <section><%= render 'categories/patch' %></section>
+    <%= image_tag ("/assets/tft.jpg"), class:'patch-image' %>
+  </div>
+  <div class="column is-3 p-0 patch-aside-container my-2">
+    <ul class="is-flex is-flex-direction-column px-6">
+      <%= link_to 'Search by category:', categories_path, class: 'has-text-accent has-text-weight-semibold is-family-monospace is-uppercase mb-3' %>
+      <%= show_all_categories %>
+    </ul>
+  </div>
+</div>
+
+<%# NEWS ARTICLES %>
+<div class="columns articles-home">
+  <%= show_new_article_list(@articles) %>
+</div>
+<div class="columns articles-home">
+  <%= show_releases_article_list(@articles) %>
+</div>

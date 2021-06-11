@@ -1,0 +1,35 @@
+<div class="sign-up-container columns pt-6 pb-4 has-text-main">
+  <div class="sign-up-box column columns is-two-fifth has-background-white is-flex is-justify-content-end">
+    <div class="sign-up column is-narrow mt-2 mb-4">
+      <h2 class="is-size-3 has-text-accent has-text-weight-semibold has-text-centered">Log In</h2>
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="field mt-4">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autocomplete: "email" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :password %><br />
+          <%= f.password_field :password, autocomplete: "current-password" %>
+        </div>
+
+        <% if devise_mapping.rememberable? %>
+          <div class="field is-flex is-align-items-center is-justify-content-flex-start">
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me, class: "ml-2" %>
+          </div>
+        <% end %>
+        <%= f.submit "Log in", class: 'sign-in-button button is-accent my-2' %>
+      <% end %>
+      <div class="is-size-7 has-text-centered mt-2">
+        Don't have an account?<%= render "devise/shared/links" %>
+      </div>
+    </div>
+  </div>
+  <div class="columns column">
+    <div class="column is-narrow sign-up-text is-flex is-flex-direction-column is-align-items-center">
+      <h1 class="is-size-3 is-family-monospace has-text-white">Welcome to the <br><b class="has-text-accent">Secret Shop</b></h1>
+      <%= image_tag ("/assets/controller.png"), class: "img-signin" %>
+    </div>
+  </div>
+</div>
