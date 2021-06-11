@@ -12,4 +12,16 @@ module VoteHelper
       link_to('LOG IN to vote!', user_session_path)
     end
   end
+
+  def most_votes
+    out = ''
+    @popular.each do |vote|
+      out += "<h1 class=\"is-size-5 has-text-weight-bold has-text-accent ml-2\">#{vote.article.title}</h1>"
+      out += "<p class=\"has-text-weight-bold ml-2 articles-news-main\">#{vote.article.text}</p>"
+    end
+    out.html_safe
+  end
 end
+
+
+ 
