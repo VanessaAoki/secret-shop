@@ -21,7 +21,12 @@ module VoteHelper
     end
     out.html_safe
   end
+
+  def most_votes_images
+    out = ''
+    @popular.each do |vote|
+      out += image_tag vote.article.image, class: 'article-main-image'
+    end
+    out.html_safe
+  end
 end
-
-
- 
