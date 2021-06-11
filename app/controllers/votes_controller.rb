@@ -1,7 +1,7 @@
 class VotesController < ApplicationController
   def index
     @votes = Vote.all
-    @popular = @votes.popular  
+    @popular = @votes.popular
   end
 
   def create
